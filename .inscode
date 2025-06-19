@@ -1,4 +1,4 @@
-run = "git add ."
+run = "git push -u origin main"
 is_html = false
 is_resident = false
 is_gui = false
