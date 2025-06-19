@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub访问解决方案</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/daisyui/4.12.10/full.min.css" rel="stylesheet">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <!-- 标题区 -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">GitHub访问解决方案</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">当您无法直接访问GitHub时，可以尝试以下替代方案</p>
+        </div>
+
+        <!-- 解决方案卡片区 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 方案1 -->
+            <div class="card card-hover bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="card-body p-6">
+                    <h2 class="card-title text-2xl text-primary mb-3">1. 镜像站点</h2>
+                    <p class="text-gray-600 mb-4">使用GitHub的国内镜像站点访问</p>
+                    <div class="space-y-2">
+                        <a href="https://hub.fastgit.org" target="_blank" class="btn btn-primary btn-sm w-full">FastGit</a>
+                        <a href="https://github.com.cnpmjs.org" target="_blank" class="btn btn-secondary btn-sm w-full">CNPMJS</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案2 -->
+            <div class="card card-hover bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="card-body p-6">
+                    <h2 class="card-title text-2xl text-accent mb-3">2. 代理工具</h2>
+                    <p class="text-gray-600 mb-4">使用网络代理工具访问</p>
+                    <div class="space-y-2">
+                        <div class="alert alert-info">
+                            <div>
+                                <span>推荐使用Clash、V2Ray等工具</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案3 -->
+            <div class="card card-hover bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="card-body p-6">
+                    <h2 class="card-title text-2xl text-success mb-3">3. 开发者工具</h2>
+                    <p class="text-gray-600 mb-4">使用Git CLI工具访问</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-sm">
+                            git config --global url."https://hub.fastgit.org/".insteadOf "https://github.com/"
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案4 -->
+            <div class="card card-hover bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="card-body p-6">
+                    <h2 class="card-title text-2xl text-warning mb-3">4. 离线下载</h2>
+                    <p class="text-gray-600 mb-4">通过其他平台下载资源</p>
+                    <div class="space-y-2">
+                        <a href="https://gitee.com" target="_blank" class="btn btn-warning btn-sm w-full">Gitee</a>
+                        <a href="https://gitcode.net" target="_blank" class="btn btn-error btn-sm w-full">GitCode</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案5 -->
+            <div class="card card-hover bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="card-body p-6">
+                    <h2 class="card-title text-2xl text-info mb-3">5. API访问</h2>
+                    <p class="text-gray-600 mb-4">使用GitHub API获取数据</p>
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <code class="text-sm">
+                            curl https://api.github.com/repos/用户名/仓库名
+                        </code>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 方案6 -->
+            <div class="card card-hover bg-white shadow-xl rounded-lg overflow-hidden">
+                <div class="card-body p-6">
+                    <h2 class="card-title text-2xl mb-3">6. 其他资源</h2>
+                    <p class="text-gray-600 mb-4">更多开发者资源</p>
+                    <div class="space-y-2">
+                        <a href="https://stackoverflow.com" target="_blank" class="btn btn-sm w-full">Stack Overflow</a>
+                        <a href="https://segmentfault.com" target="_blank" class="btn btn-sm w-full">SegmentFault</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 注意事项 -->
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-blue-800 mb-3">注意事项</h3>
+            <ul class="list-disc pl-5 space-y-2 text-blue-700">
+                <li>镜像站点可能无法提供完整功能</li>
+                <li>使用代理工具请遵守相关法律法规</li>
+                <li>定期检查镜像站点的可用性</li>
+                <li>重要项目建议使用官方渠道访问</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

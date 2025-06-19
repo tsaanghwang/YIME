@@ -1,4 +1,4 @@
-run = "git_push_guide.html"
+run = "github_access.html"
 is_html = true
 is_resident = true
 is_gui = false
