@@ -1,4 +1,4 @@
-run = "git push -u origin main"
+run = "git remote -v"
 is_html = false
 is_resident = false
 is_gui = false
