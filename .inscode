@@ -1,4 +1,4 @@
-run = "github_access.html"
-is_html = true
-is_resident = true
+run = "git add ."
+is_html = false
+is_resident = false
 is_gui = false

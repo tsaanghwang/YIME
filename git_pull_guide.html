@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拉取更新指南</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/daisyui/4.12.10/full.min.css" rel="stylesheet">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <!-- 标题区 -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">拉取更新操作指南</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">从远程仓库获取最新代码的操作方法</p>
+        </div>
+
+        <!-- 信息展示区 -->
+        <div class="max-w-3xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+            <div class="card-body p-8">
+                <div class="flex items-center mb-6">
+                    <div class="avatar">
+                        <div class="w-16 rounded-full bg-primary text-white flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ml-6">
+                        <h2 class="text-2xl font-semibold">拉取更新操作</h2>
+                        <p class="text-gray-500">保持本地代码与远程仓库同步</p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- 基本拉取命令 -->
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">基本拉取命令</h3>
+                        <div class="alert alert-info">
+                            <div>
+                                <span>使用以下命令从远程仓库拉取更新并自动合并:</span>
+                            </div>
+                        </div>
+                        <div class="mockup-code mt-2">
+                            <pre><code>git pull origin 分支名</code></pre>
+                            <pre data-prefix=">" class="text-warning"><code># 例如: git pull origin main</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- 相关命令对比 -->
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">相关命令对比</h3>
+                        <div class="overflow-x-auto">
+                            <table class="table w-full">
+                                <thead>
+                                    <tr>
+                                        <th>命令</th>
+                                        <th>作用</th>
+                                        <th>何时使用</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>git pull</code></td>
+                                        <td>拉取并自动合并</td>
+                                        <td>需要快速同步远程更改</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>git fetch</code></td>
+                                        <td>仅获取远程更新</td>
+                                        <td>想先查看更改再决定是否合并</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>git fetch && git merge</code></td>
+                                        <td>分步获取并合并</td>
+                                        <td>需要更谨慎的合并过程</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- 高级用法 -->
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">高级用法</h3>
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="mockup-code">
+                                <pre><code>git pull --rebase</code></pre>
+                                <pre data-prefix=">" class="text-success"><code># 使用rebase方式合并，保持提交历史线性</code></pre>
+                            </div>
+                            <div class="mockup-code">
+                                <pre><code>git pull origin main --no-ff</code></pre>
+                                <pre data-prefix=">" class="text-success"><code># 强制创建合并提交，即使可以快进</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 注意事项 -->
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-blue-800 mb-3">注意事项</h3>
+            <ul class="list-disc pl-5 space-y-2 text-blue-700">
+                <li>拉取前建议先提交或暂存本地更改</li>
+                <li>遇到冲突时，git pull会中止并提示解决冲突</li>
+                <li>使用<code>git stash</code>可以临时保存工作目录的修改</li>
+                <li>定期拉取更新可以减少合并冲突的可能性</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

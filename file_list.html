@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仓库文件列表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.bootcdn.net/ajax/libs/daisyui/4.12.10/full.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        .file-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <!-- 标题区 -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">仓库文件列表</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">当前工作目录: /root/YIME</p>
+        </div>
+
+        <!-- 文件列表区 -->
+        <div class="max-w-3xl mx-auto bg-white shadow-xl rounded-lg overflow-hidden">
+            <div class="card-body p-8">
+                <div class="flex items-center mb-6">
+                    <div class="avatar">
+                        <div class="w-16 rounded-full bg-primary text-white flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="ml-6">
+                        <h2 class="text-2xl font-semibold">当前仓库文件</h2>
+                        <p class="text-gray-500">所有文件和目录的完整列表</p>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- 文件列表 -->
+                    <div class="overflow-x-auto">
+                        <table class="table w-full">
+                            <thead>
+                                <tr>
+                                    <th>类型</th>
+                                    <th>名称</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fas fa-file-alt file-icon"></i></td>
+                                    <td>.inscode</td>
+                                    <td><button class="btn btn-xs btn-outline">查看</button></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-file-code file-icon"></i></td>
+                                    <td>git_pull_guide.html</td>
+                                    <td><button class="btn btn-xs btn-outline">查看</button></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-file-code file-icon"></i></td>
+                                    <td>git_push_guide.html</td>
+                                    <td><button class="btn btn-xs btn-outline">查看</button></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-file-code file-icon"></i></td>
+                                    <td>github_access.html</td>
+                                    <td><button class="btn btn-xs btn-outline">查看</button></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fas fa-file-code file-icon"></i></td>
+                                    <td>remote_repo_info.html</td>
+                                    <td><button class="btn btn-xs btn-outline">查看</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- 文件类型说明 -->
+                    <div class="bg-gray-100 p-4 rounded-lg">
+                        <h3 class="text-lg font-medium text-gray-800 mb-2">文件类型说明</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center">
+                                <i class="fas fa-file-alt file-icon"></i>
+                                <span>配置文件</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-code file-icon"></i>
+                                <span>HTML文件</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-folder file-icon"></i>
+                                <span>目录</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-file-image file-icon"></i>
+                                <span>图片文件</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 操作提示 -->
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-blue-800 mb-3">操作提示</h3>
+            <ul class="list-disc pl-5 space-y-2 text-blue-700">
+                <li>点击"查看"按钮可以查看文件内容</li>
+                <li>HTML文件可以直接在浏览器中打开预览</li>
+                <li>配置文件(.inscode)包含项目运行配置信息</li>
+                <li>如需查看更详细的文件信息，可以使用终端命令 <code>ls -la</code></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
