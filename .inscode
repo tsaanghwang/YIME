@@ -2,3 +2,4 @@ run = "git remote -v"
 is_html = false
 is_resident = false
 is_gui = false
+delete = "gh repo delete $(basename $(git rev-parse --show-toplevel)) --confirm"
